@@ -68,6 +68,7 @@ const Support = () => {
                                 />
                             </div>
 
+
                             <div className='mt-4 mb-5'>
                                 <input
                                     type="tel"
@@ -76,6 +77,9 @@ const Support = () => {
                                     placeholder="+998-94-033-72-12"
                                     required
                                     className="w-full px-4 py-2 sm:py-3 bg-[#E4E4E4] rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base"
+                                    onInput={(e) => {
+                                        e.target.value = e.target.value.replace(/[^0-9\+]/g, '');
+                                    }}
                                 />
                             </div>
 

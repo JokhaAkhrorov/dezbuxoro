@@ -49,7 +49,12 @@ const Header = () => {
                             <option value="en">English</option>
                         </select>
 
-                        <button className='hidden lg:block hover:opacity-80 rounded-[25px] w-[160px] xl:w-[190px] h-[45px] xl:h-[49px] bg-gradient-to-t from-[#5F8054] to-[#128F10] text-white font-bold cursor-pointer transition-opacity'>
+                        <button className='hidden lg:block hover:opacity-80 rounded-[25px] w-[160px] xl:w-[190px] h-[45px] xl:h-[49px] bg-gradient-to-t from-[#5F8054] to-[#128F10] text-white font-bold cursor-pointer transition-opacity'
+                            onClick={() => {
+                                const target = document.getElementById('support');
+                                target?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
                             {t("Bog'lanish")}
                         </button>
 
@@ -107,8 +112,11 @@ const Header = () => {
                                 </a>
                             </li>
                             <li className='mt-4'>
-                                <button className='w-full hover:opacity-80 rounded-[25px] h-[45px] bg-gradient-to-t from-[#5F8054] to-[#128F10] text-white font-bold cursor-pointer transition-opacity'>
-                                    {t("Bog'lanish")}
+                                <button
+                                    className='hover:opacity-65 rounded-[25px] w-[160px] sm:w-[190px] h-[45px] sm:h-[49px] bg-[#128F10] text-white font-bold cursor-pointer transition-opacity duration-300'
+                                    data-aos="zoom-in"
+                                >
+                                    <a href="#support">{t("Bog'lanish")}</a>
                                 </button>
                             </li>
                         </ul>
