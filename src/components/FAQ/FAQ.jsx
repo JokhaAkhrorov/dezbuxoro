@@ -62,7 +62,7 @@ const Faq = () => {
                                     </svg>
                                 </summary>
                                 <div className="px-4 sm:px-5 pb-4 sm:pb-5 -mt-2">
-                                    <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                                         {t(item.answerKey)}
                                     </p>
                                 </div>

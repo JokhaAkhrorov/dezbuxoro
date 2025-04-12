@@ -10,6 +10,7 @@ const Support = () => {
     const { t, i18n } = useTranslation();
 
     const [loading, setLoading] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const SendMessage = (e) => {
         setLoading(true);
@@ -34,7 +35,11 @@ const Support = () => {
             console.log(res);
         })
             .catch((error) => { console.log(error); })
-            .finally(() => { setLoading(false); })
+            .finally(() => {
+                setLoading(false);
+                setIsSubmitted(true); // modal ochiladi
+            });
+
     };
 
     useEffect(() => {
@@ -44,6 +49,8 @@ const Support = () => {
             once: true,
         });
     }, []);
+
+
 
     return (
         <section id='support' className="overflow-hidden py-8 md:py-10 px-4 sm:px-6">
@@ -91,6 +98,11 @@ const Support = () => {
                                 {loading ? t('Yuborilmoqda...') : t("Bog'lanish")}
                             </button>
                         </form>
+                        {isSubmitted && (
+                            <p id="modal-text" className="modal__text text-lg font-semibold text-green-700">
+                                {t("So'rovingiz qabul qilindi, tez orada aloqaga chiqamiz!!")}
+                            </p>
+                        )}
                     </div>
 
                     <div className="hidden lg:flex items-center justify-center order-1 lg:order-2"

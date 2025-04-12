@@ -112,12 +112,14 @@ const Header = () => {
                                 </a>
                             </li>
                             <li className='mt-4'>
-                                <button
-                                    className='hover:opacity-65 rounded-[25px] w-[160px] sm:w-[190px] h-[45px] sm:h-[49px] bg-[#128F10] text-white font-bold cursor-pointer transition-opacity duration-300'
+                                <a
+                                    href="#support"
+                                    onClick={toggleMobileMenu}
+                                    className='block text-center hover:opacity-65 rounded-[25px] w-[160px] sm:w-[190px] h-[45px] sm:h-[49px] bg-[#128F10] text-white font-bold cursor-pointer transition-opacity duration-300'
                                     data-aos="zoom-in"
                                 >
-                                    <a href="#support">{t("Bog'lanish")}</a>
-                                </button>
+                                    {t("Bog'lanish")}
+                                </a>
                             </li>
                         </ul>
                     </div>

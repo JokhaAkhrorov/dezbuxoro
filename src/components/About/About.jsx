@@ -20,7 +20,7 @@ const About = () => {
             <div className="container">
                 <div>
                     <h2 className='text-2xl font-bold text-[#023107] mb-[41px] md:text-left'>
-                        {t("Biz haqimizda")}
+                        {t("Biz xaqimizda")}
                     </h2>
                     <div className='border border-[#CCCCCC]'></div>
                 </div>
